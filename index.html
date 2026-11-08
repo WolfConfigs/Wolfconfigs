@@ -24,7 +24,7 @@
             --brand-primary: #76e600;   /* Das giftige Cyber-Grün aus deinem Logo */
             --brand-glow: rgba(118, 230, 0, 0.25); /* Perfekt abgestimmtes Leuchten */
             
-            /* Button-Farbe für GitHub (Dunkles Metall) */
+            /* Button-Farbe für sekundäre Knöpfe */
             --btn-dark: #12161a;
         }
 
@@ -39,7 +39,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
         /* Glaskarten-Container mit grünem Cyber-Leuchten */
@@ -107,21 +107,7 @@
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* GitHub Button: Dunkler Look mit grünem Rand */
-        .btn-github {
-            background-color: var(--btn-dark);
-            color: var(--text-primary);
-            border: 1px solid rgba(118, 230, 0, 0.3);
-        }
-        
-        .btn-github:hover {
-            transform: translateY(-2px);
-            border-color: var(--brand-primary);
-            box-shadow: 0 0 15px rgba(118, 230, 0, 0.2);
-            background-color: #161b22;
-        }
-
-        /* Discord Button: Vollflächig giftgrün, schwarze Schrift */
+        /* Haupt-Highlight-Button: Discord (vollflächig grün) */
         .btn-discord {
             background-color: var(--brand-primary);
             color: #000000;
@@ -131,8 +117,22 @@
         
         .btn-discord:hover {
             transform: translateY(-2px);
-            background-color: #8eff1e; /* Noch einen Tick helleres Grün beim Hover */
+            background-color: #8eff1e; 
             box-shadow: 0 0 25px var(--brand-primary);
+        }
+
+        /* Alle weiteren Buttons teilen sich das edle dunkle Design mit grünem Glow-Effekt */
+        .btn-secondary {
+            background-color: var(--btn-dark);
+            color: var(--text-primary);
+            border: 1px solid rgba(118, 230, 0, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            border-color: var(--brand-primary);
+            box-shadow: 0 0 15px rgba(118, 230, 0, 0.2);
+            background-color: #161b22;
         }
 
         @keyframes fadeIn {
@@ -149,15 +149,34 @@
         </div>
 
         <h1>WolfConfigs</h1>
-        <p>Willkommen! Hier findest du alle wichtigen Links zu meinen Konfigurationen, Projekten und der Community.</p>
+        <p>Hol das Maximum aus deinem Spiel. Hier findest du meine optimierten Konfigurationen und Community-Links.</p>
         
         <div class="links-flex">
-            <!-- Tausche die # einfach gegen deine echten Links aus -->
-            <a href="https://github.com/WolfConfigs" class="btn btn-github" target="_blank">
-                💻 GitHub Repository
+            <!-- Wichtigster Community-Link (Ersetze das # mit deinem Discord Invite-Link) -->
+            <a href="#" class="btn btn-discord" target="_blank">
+                💬 Join the Discord
             </a>
-            <a href="https://discord.gg/sX2qd3cbST" class="btn btn-discord" target="_blank">
-                💬 Discord Server
+
+            <!-- Führt direkt zu deinem Hauptprofil -->
+            <a href="https://github.com/b00nji" class="btn btn-secondary" target="_blank">
+                💻 Mein GitHub Profil
+            </a>
+
+            <a href="https://github.com/WolfConfigs/RTCWConfigs" class="btn btn-secondary" target="_blank">
+                ⚙️ RTCW Configs
+            </a>
+
+             <!-- Spezifische Repositories unter deinem Profil -->
+            <a href="https://github.com/WolfConfigs/ETProConfigs" class="btn btn-secondary" target="_blank">
+                ⚙️ ETpro Configs
+            </a>
+            
+            <a href="https://github.com/WolfConfigs/ETLegacyConfigs" class="btn btn-secondary" target="_blank">
+                ⚙️ ETLegacy Configs
+            </a>
+            
+            <a href="https://github.com/WolfConfigs/Server-Browsers" class="btn btn-secondary" target="_blank">
+                🌐 Server Browsers
             </a>
         </div>
     </div>
