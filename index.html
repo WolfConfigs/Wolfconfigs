@@ -5,34 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WolfConfigs</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            /* Hintergrund-Farbe der Glaskarte (Dunkles Anthrazit passend zum Logo) */
             --card-bg: rgba(10, 15, 10, 0.75);
             --card-border: rgba(118, 230, 0, 0.15);
-            
-            /* Textfarben */
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
-
-            /* 🎨 EXAKTE WOLFCONFIGS BRAND-FARBEN */
-            --brand-primary: #76e600;   /* Das giftige Cyber-Grün aus deinem Logo */
-            --brand-glow: rgba(118, 230, 0, 0.25); /* Perfekt abgestimmtes Leuchten */
-            
-            /* Button-Farbe für sekundäre Knöpfe */
+            --brand-primary: #76e600;
+            --brand-glow: rgba(118, 230, 0, 0.25);
             --btn-dark: #12161a;
         }
-
-        /* Body mit deinem hochgeladenen Hintergrundbild */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
-                        url('./hero.jpg') no-repeat center center fixed;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('./hero.jpg') no-repeat center center fixed;
             background-size: cover;
             color: var(--text-primary);
             min-height: 100vh;
@@ -41,8 +26,6 @@
             align-items: center;
             padding: 40px 20px;
         }
-
-        /* Glaskarten-Container mit grünem Cyber-Leuchten */
         .container {
             background: var(--card-bg);
             backdrop-filter: blur(20px);
@@ -56,20 +39,14 @@
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px var(--brand-glow);
             animation: fadeIn 0.8s ease-out;
         }
-
-        /* LOGO STYLE */
-        .logo-container {
-            margin-bottom: 1rem;
-        }
-
+        .logo-container { margin-bottom: 1rem; }
         .logo {
             width: 100%;
             max-width: 220px;
             height: auto;
             object-fit: contain;
-            filter: drop-shadow(0 0 8px var(--brand-glow)); 
+            filter: drop-shadow(0 0 8px var(--brand-glow));
         }
-
         h1 {
             font-size: 2.25rem;
             font-weight: 900;
@@ -80,20 +57,13 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
         p {
             color: var(--text-secondary);
             font-size: 0.95rem;
             margin-bottom: 2rem;
             line-height: 1.5;
         }
-
-        .links-flex {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
+        .links-flex { display: flex; flex-direction: column; gap: 12px; }
         .btn {
             display: flex;
             align-items: center;
@@ -106,35 +76,28 @@
             text-decoration: none;
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
-        /* Haupt-Highlight-Button: Discord (vollflächig grün) */
         .btn-discord {
             background-color: var(--brand-primary);
-            color: #000000;
+            color: #000;
             border: 1px solid transparent;
             box-shadow: 0 4px 12px rgba(118, 230, 0, 0.2);
         }
-        
         .btn-discord:hover {
             transform: translateY(-2px);
-            background-color: #8eff1e; 
+            background-color: #8eff1e;
             box-shadow: 0 0 25px var(--brand-primary);
         }
-
-        /* Alle weiteren Buttons teilen sich das edle dunkle Design mit grünem Glow-Effekt */
         .btn-secondary {
             background-color: var(--btn-dark);
             color: var(--text-primary);
             border: 1px solid rgba(118, 230, 0, 0.3);
         }
-        
         .btn-secondary:hover {
             transform: translateY(-2px);
             border-color: var(--brand-primary);
             box-shadow: 0 0 15px rgba(118, 230, 0, 0.2);
             background-color: #161b22;
         }
-
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
@@ -142,49 +105,33 @@
     </style>
 </head>
 <body>
-
-    <div class="container">
+    <main class="container">
         <div class="logo-container">
             <img src="./logo.png" alt="WolfConfigs Logo" class="logo">
         </div>
-
         <h1>Wolf Configs</h1>
-       <p>Maximize your performance. Find optimized configurations, toolkits, and community links right here.</p>
-        
+        <p>Maximize your performance. Find optimized configurations, toolkits, and community links right here.</p>
         <div class="links-flex">
-            <!-- Wichtigster Community-Link (Ersetze das # mit deinem Discord Invite-Link) -->
-            <a href="https://discord.gg/sX2qd3cbST" class="btn btn-discord" target="_blank">
+            <a href="https://discord.gg/sX2qd3cbST" class="btn btn-discord" target="_blank" rel="noopener noreferrer">
                 💬 Join the Discord
             </a>
-
-            <!-- Führt direkt zu deinem Hauptprofil -->
-            <a href="https://github.com/b00nji" class="btn btn-secondary" target="_blank">
+            <a href="./discord.html" class="btn btn-secondary">ℹ️ Discord-Seite</a>
+            <a href="https://github.com/b00nji" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                 💻 My GitHub Profil
             </a>
-
-            <a href="https://github.com/WolfConfigs/RTCWConfigs" class="btn btn-secondary" target="_blank">
+            <a href="https://github.com/WolfConfigs/RTCWConfigs" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                 ⚙️ RTCW Configs
             </a>
-
-             <!-- Spezifische Repositories unter deinem Profil -->
-            <a href="https://github.com/WolfConfigs/ETProConfigs" class="btn btn-secondary" target="_blank">
+            <a href="https://github.com/WolfConfigs/ETProConfigs" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                 ⚙️ ETpro Configs
             </a>
-            
-            <a href="https://github.com/WolfConfigs/ETLegacyConfigs" class="btn btn-secondary" target="_blank">
+            <a href="https://github.com/WolfConfigs/ETLegacyConfigs" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                 ⚙️ ETLegacy Configs
             </a>
-            
-            <a href="https://github.com/WolfConfigs/Server-Browsers" class="btn btn-secondary" target="_blank">
+            <a href="https://github.com/WolfConfigs/Server-Browsers" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                 🌐 Server Browsers
             </a>
-        <</div>
-
-       <!-- 📊 Dein funktionierender, farblich angepasster Flag Counter -->
-        <div class="counter-container">
-            <a href="https://info.flagcounter.com/v17t"><img src="https://s01.flagcounter.com/count2/v17t/bg_0A0F0A/txt_76e600/border_0/columns_3/maxflags_12/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
-  </div>
-    </div>
-
+        </div>
+    </main>
 </body>
 </html>
