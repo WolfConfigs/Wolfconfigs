@@ -24,9 +24,8 @@
             --brand-primary: #76e600;   /* Das giftige Cyber-Grün aus deinem Logo */
             --brand-glow: rgba(118, 230, 0, 0.25); /* Perfekt abgestimmtes Leuchten */
             
-            /* Social-Media-Farben */
-            --discord-color: #5865F2;
-            --github-color: #1e293b;
+            /* Button-Farbe für GitHub (Dunkles Metall) */
+            --btn-dark: #12161a;
         }
 
         /* Body mit deinem hochgeladenen Hintergrundbild */
@@ -58,17 +57,16 @@
             animation: fadeIn 0.8s ease-out;
         }
 
-        /* 👁️ LOGO STYLE */
+        /* LOGO STYLE */
         .logo-container {
             margin-bottom: 1rem;
         }
 
         .logo {
             width: 100%;
-            max-width: 220px;     /* Optimale Breite für dein breites Logo */
+            max-width: 220px;
             height: auto;
             object-fit: contain;
-            /* Subtiler grüner Schein hinter dem Logo */
             filter: drop-shadow(0 0 8px var(--brand-glow)); 
         }
 
@@ -102,34 +100,39 @@
             justify-content: center;
             gap: 10px;
             padding: 0.9rem;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1rem;
             border-radius: 12px;
             text-decoration: none;
-            color: white;
-            transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .btn:hover {
-            transform: translateY(-2px);
-            filter: brightness(1.1);
-        }
-
+        /* GitHub Button: Dunkler Look mit grünem Rand */
         .btn-github {
-            background-color: var(--github-color);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background-color: var(--btn-dark);
+            color: var(--text-primary);
+            border: 1px solid rgba(118, 230, 0, 0.3);
         }
         
         .btn-github:hover {
-            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+            border-color: var(--brand-primary);
+            box-shadow: 0 0 15px rgba(118, 230, 0, 0.2);
+            background-color: #161b22;
         }
 
+        /* Discord Button: Vollflächig giftgrün, schwarze Schrift */
         .btn-discord {
-            background-color: var(--discord-color);
+            background-color: var(--brand-primary);
+            color: #000000;
+            border: 1px solid transparent;
+            box-shadow: 0 4px 12px rgba(118, 230, 0, 0.2);
         }
         
         .btn-discord:hover {
-            box-shadow: 0 5px 15px rgba(88, 101, 242, 0.4);
+            transform: translateY(-2px);
+            background-color: #8eff1e; /* Noch einen Tick helleres Grün beim Hover */
+            box-shadow: 0 0 25px var(--brand-primary);
         }
 
         @keyframes fadeIn {
@@ -141,7 +144,6 @@
 <body>
 
     <div class="container">
-        <!-- Dein neues WolfConfigs Logo -->
         <div class="logo-container">
             <img src="./logo.png" alt="WolfConfigs Logo" class="logo">
         </div>
@@ -150,7 +152,7 @@
         <p>Willkommen! Hier findest du alle wichtigen Links zu meinen Konfigurationen, Projekten und der Community.</p>
         
         <div class="links-flex">
-            <!-- Setze hier einfach deine Links anstelle des # ein -->
+            <!-- Tausche die # einfach gegen deine echten Links aus -->
             <a href="#" class="btn btn-github" target="_blank">
                 💻 GitHub Repository
             </a>
